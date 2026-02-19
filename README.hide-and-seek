@@ -1,3 +1,4 @@
+
                  *** D A N G E R O U S ***
                  *** M U N I T I O N S *** 
 
@@ -41,20 +42,22 @@ alternative if you have access to very high quality jpegs is to
 make a cropped and lower quality version of about 200 to 300Kb;
 again this must be destroyed after making the jpeg containing
 the hidden file.
- 
+
+
+Build/Installation Process Debian-Based Systems:
+
+sudo -s
+apt install -y build-essential bison flex libjpeg-dev
+cd /opt/ ; git clone https://github.com/h3xx/jphs.git ; cd jphs/jpeg-8a/ ; ./configure && cd .. && make make LDLIBS="-L./jpeg-8a/.libs -ljpeg" CPPFLAGS="-I./jpeg-8a"
+ln -s /opt/jphs/jphide /usr/local/bin/
+ln -s /opt/jphs/jpseek /usr/local/bin/
+
 
 Instructions
 
 jphide  input-jpeg-file  output-jpeg-file  file-to-be-hidden
 
 jpseek  input-jpeg-file  output-hidden-file
-
-
-Building the programs
-
-Just type make.
-
-Install "jphide" and "jpseek" in your /usr/local/bin or wherever.
 
 
 Conclusion
