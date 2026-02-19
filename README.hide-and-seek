@@ -47,8 +47,9 @@ the hidden file.
 Build/Installation Process Debian-Based Systems:
 
 sudo -s
-apt install -y build-essential bison flex libjpeg-dev
-cd /opt/ ; git clone https://github.com/paulwpoteete/jphs.git ; cd jphs/jpeg-8a/ ; ./configure && cd .. && make make LDLIBS="-L./jpeg-8a/.libs -ljpeg" CPPFLAGS="-I./jpeg-8a"
+
+apt-get install -y build-essential bison flex libjpeg-dev
+cd /opt/ ; git clone https://github.com/paulwpoteete/jphs.git ; cd jphs/jpeg-8a/ ; ./configure && cd .. && make LDLIBS="-L./jpeg-8a/.libs -ljpeg" CPPFLAGS="-I./jpeg-8a"
 ln -s /opt/jphs/jphide /usr/local/bin/
 ln -s /opt/jphs/jpseek /usr/local/bin/
 
